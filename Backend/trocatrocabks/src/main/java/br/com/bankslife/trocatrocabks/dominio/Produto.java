@@ -2,40 +2,50 @@ package br.com.bankslife.trocatrocabks.dominio;
 
 public class Produto {
 	
-	private int id;
+	private Integer id;
 	private String nome;
-	private Enum estadoConservacao;
+	private String detalhes;
+	private String trocaOuDoacao;
+	private String estadoConservacao;
+	private String urlImagem;
 	
-	public Produto(int id, String nome, Enum estadoConservacao) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.estadoConservacao = estadoConservacao;
-	}
-
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
-
 	public String getNome() {
 		return nome;
 	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public Enum getEstadoConservacao() {
+	public String getDetalhes() {
+		return detalhes;
+	}
+	public void setDetalhes(String detalhes) {
+		this.detalhes = detalhes;
+	}
+	public String getTrocaOuDoacao() {
+		return trocaOuDoacao;
+	}
+	public void setTrocaOuDoacao(String trocaOuDoacao) {
+		this.trocaOuDoacao = trocaOuDoacao;
+	}
+	public String getEstadoConservacao() {
 		return estadoConservacao;
 	}
-
-	public void setEstadoConservacao(Enum estadoConservacao) {
+	public void setEstadoConservacao(String estadoConservacao) {
 		this.estadoConservacao = estadoConservacao;
 	}
+	public String getUrlImagem() {
+		return urlImagem;
+	}
+	public void setUrlImagem(String urlImagem) {
+		this.urlImagem = urlImagem;
+	}
+	
 	
 	
 
