@@ -2,28 +2,25 @@ package br.com.bankslife.trocatrocabks.controller;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import br.com.bankslife.trocatrocabks.dominio.Produto;
+import br.com.bankslife.trocatrocabks.repository.ProdutoRepository;
 
 @Controller
 public class HomeController {
 	
-	@PersistenceContext
-	private EntityManager entityManager;
+	@Autowired
+	private ProdutoRepository repository;
+
 	
 	@GetMapping("/home")
 	public String home(Model model) {
 		
-		Query query = entityManager.createQuery("select p from Produto p", Produto.class);
-		List<Produto> produtos = query.getResultList();
-		
+		List<Produto> produtos = repository.recuperaTodosOsProdutos();
 		model.addAttribute("produtos", produtos);		
 		return "home";
 	}
