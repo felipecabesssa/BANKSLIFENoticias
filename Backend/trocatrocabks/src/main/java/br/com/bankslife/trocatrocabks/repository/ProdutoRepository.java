@@ -3,7 +3,7 @@ package br.com.bankslife.trocatrocabks.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.bankslife.trocatrocabks.dominio.Produto;
+import br.com.bankslife.trocatrocabks.modelo.Produto;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {

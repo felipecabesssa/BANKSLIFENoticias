@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import br.com.bankslife.trocatrocabks.dominio.Produto;
+import br.com.bankslife.trocatrocabks.modelo.Produto;
 import br.com.bankslife.trocatrocabks.repository.ProdutoRepository;
 
 @Controller

@@ -1,6 +1,6 @@
-package br.com.bankslife.trocatrocabks.dominio;
+package br.com.bankslife.trocatrocabks.modelo;
 
-public class Recebedor {
+public class Doador {
 	
 	private int id;
 	private String nome;
@@ -8,7 +8,7 @@ public class Recebedor {
 	private String insta;
 	private int celular;
 	
-	public Recebedor(int id, String nome, String apelido, String insta, int celular) {
+	public Doador(int id, String nome, String apelido, String insta, int celular) {
 		super();
 		this.id = id;
 		this.nome = nome;

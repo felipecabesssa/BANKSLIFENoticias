@@ -1,9 +1,11 @@
-package br.com.bankslife.trocatrocabks.dominio;
+package br.com.bankslife.trocatrocabks.modelo;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,8 +18,13 @@ public class Produto {
 	
 	private String nome;
 	private String detalhes;
-	private String trocaOuDoacao;
-	private String estadoConservacao;
+	
+	@Enumerated(EnumType.STRING)
+	private TrocaOuDoacao troca;
+	
+	@Enumerated(EnumType.STRING)
+	private EstadoConservacao conservado;
+	
 	private String urlImagem;
 	private LocalDate dataTroca;
 	private String localDaTroca;
@@ -35,17 +42,17 @@ public class Produto {
 	public void setDetalhes(String detalhes) {
 		this.detalhes = detalhes;
 	}
-	public String getTrocaOuDoacao() {
-		return trocaOuDoacao;
+	public TrocaOuDoacao getTrocaOuDoacao() {
+		return troca;
 	}
-	public void setTrocaOuDoacao(String trocaOuDoacao) {
-		this.trocaOuDoacao = trocaOuDoacao;
+	public void setTrocaOuDoacao(TrocaOuDoacao trocaOuDoacao) {
+		this.troca = trocaOuDoacao;
 	}
-	public String getEstadoConservacao() {
-		return estadoConservacao;
+	public EstadoConservacao getEstadoConservacao() {
+		return conservado;
 	}
-	public void setEstadoConservacao(String estadoConservacao) {
-		this.estadoConservacao = estadoConservacao;
+	public void setEstadoConservacao(EstadoConservacao estadoConservacao) {
+		this.conservado = estadoConservacao;
 	}
 	public String getUrlImagem() {
 		return urlImagem;
