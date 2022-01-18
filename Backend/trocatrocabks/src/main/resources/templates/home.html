@@ -7,23 +7,54 @@
         <div class="container">
             <div class="card" th:each="produto : ${produtos}">
                 <div class="card-header" th:text="${produto.nome}">Nome do Produto</div>
-                <div th:text="${produto.estadoConservacao}">Estado de conservação</div>
-                <div th:text="${produto.trocaOuDoacao}">Troca ou Doação ?</div>
-                <div>Data da Troca/Doação: <span th:text="${produto.dataTroca}">22/02/2022</span></div>
-                <div>Detalhes</div>
-                <div>
-                    <textarea class="form-control" th:text="${produto.detalhes}">Falae como tá</textarea>
-                </div>
-                    <img th:src="${produto.urlImagem}" src=""/>
-                </div>
-                <div>Estado de conservação</div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Bom</label>
-                    <label for="">Ruim</label>
-                    <label for="">+2flip</label>
-                </div>
-                
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-sm-8 mb-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div>Estado de conservação</div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox1">Bom</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                            <label class="form-check-label" for="inlineCheckbox2">Ruim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                            <label class="form-check-label" for="inlineCheckbox3">+2Flip</label>
+                                        </div>
+                                        <div th:text="${produto.estadoConservacao}">Estado de conservação</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div>Troca ou Doação</div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                                            <label class="form-check-label" for="inlineCheckbox4">Troca</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                                            <label class="form-check-label" for="inlineCheckbox5">Doação</label>
+                                        </div>
+                                        <div th:text="${produto.trocaOuDoacao}">Troca ou Doação ?</div>
+                                    </div>
+                                </div>
+                                <div>Detalhes</div>
+                                <div>
+                                    <textarea class="form-control" th:text="${produto.detalhes}">Falae como tá</textarea>
+                                </div>
+                                <div>Data da Troca/Doação: <span th:text="${produto.dataTroca}">22/02/2022</span></div>
+                            </div>
+                        
+                            <div class="col-12 col-sm-4">
+                                <div>
+                                    <img class="img-thumbnail" th:src="${produto.urlImagem}" src=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                 
             </div>
         </div>
     </body>
