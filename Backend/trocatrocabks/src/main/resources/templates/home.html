@@ -1,20 +1,30 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
     </head>
     <body>
-        <div th:each="produto : ${produtos}">
-            <div th:text="${produto.nome}">Nome do Produto</div>
-            <div th:text="${produto.estadoConservacao}">Estado de conservação</div>
-            <div th:text="${produto.trocaOuDoacao}">Troca ou Doação ?</div>
-            <div>Data da Troca/Doação: <span th:text="${produto.dataTroca}">22/02/2022</span></div>
-            <div>Detalhes</div>
-            <div>
-                <textarea th:text="${produto.detalhes}">Falae como tá</textarea>
+        <div class="container">
+            <div class="card" th:each="produto : ${produtos}">
+                <div class="card-header" th:text="${produto.nome}">Nome do Produto</div>
+                <div th:text="${produto.estadoConservacao}">Estado de conservação</div>
+                <div th:text="${produto.trocaOuDoacao}">Troca ou Doação ?</div>
+                <div>Data da Troca/Doação: <span th:text="${produto.dataTroca}">22/02/2022</span></div>
+                <div>Detalhes</div>
+                <div>
+                    <textarea class="form-control" th:text="${produto.detalhes}">Falae como tá</textarea>
+                </div>
+                    <img th:src="${produto.urlImagem}" src=""/>
+                </div>
+                <div>Estado de conservação</div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Bom</label>
+                    <label for="">Ruim</label>
+                    <label for="">+2flip</label>
+                </div>
+                
             </div>
-                <img th:src="${produto.urlImagem}" src=""/>
-            </div>
-            
         </div>
     </body>
 </html>
