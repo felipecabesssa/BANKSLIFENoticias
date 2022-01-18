@@ -3,16 +3,18 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <div>
-            <div>Nome do Produto</div>
+        <div th:each="produto : ${produtos}">
+            <div th:text="${produto.nome}">Nome do Produto</div>
+            <div th:text="${produto.estadoConservacao}">Estado de conservação</div>
+            <div th:text="${produto.trocaOuDoacao}">Troca ou Doação ?</div>
+            <div>Data da Troca/Doação: <span th:text="${produto.dataTroca}">22/02/2022</span></div>
             <div>Detalhes</div>
             <div>
-                <textarea>Falae como tá</textarea>
+                <textarea th:text="${produto.detalhes}">Falae como tá</textarea>
             </div>
-                <img src=""/>
+                <img th:src="${produto.urlImagem}" src=""/>
             </div>
-            <div>Estado de conservação</div>
-            <div>Troca ou Doação ?</div>
+            
         </div>
     </body>
 </html>

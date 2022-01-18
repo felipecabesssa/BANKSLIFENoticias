@@ -1,20 +1,19 @@
 package br.com.bankslife.trocatrocabks.dominio;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Produto {
 	
-	private Integer id;
 	private String nome;
 	private String detalhes;
 	private String trocaOuDoacao;
 	private String estadoConservacao;
 	private String urlImagem;
+	private LocalDate dataTroca;
+	private String localDaTroca;
+	private LocalDateTime horarioTroca;
 	
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
 	public String getNome() {
 		return nome;
 	}
@@ -45,7 +44,24 @@ public class Produto {
 	public void setUrlImagem(String urlImagem) {
 		this.urlImagem = urlImagem;
 	}
-	
+	public LocalDate getDataTroca() {
+		return dataTroca;
+	}
+	public void setDataTroca(LocalDate dataTroca) {
+		this.dataTroca = dataTroca;
+	}
+	public String getLocalDaTroca() {
+		return localDaTroca;
+	}
+	public void setLocalDaTroca(String localDaTroca) {
+		this.localDaTroca = localDaTroca;
+	}
+	public LocalDateTime getHorarioTroca() {
+		return horarioTroca;
+	}
+	public void setHorarioTroca(LocalDateTime horarioTroca) {
+		this.horarioTroca = horarioTroca;
+	}
 	
 	
 
