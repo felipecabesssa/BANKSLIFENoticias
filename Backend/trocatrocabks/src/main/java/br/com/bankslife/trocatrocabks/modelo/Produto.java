@@ -16,14 +16,14 @@ public class Produto {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String nome;
+	private String nomeProduto;
 	private String detalhes;
 	
 	@Enumerated(EnumType.STRING)
-	private TrocaOuDoacao troca;
+	private TrocaOuDoacao trocaOuDoacao;
 	
 	@Enumerated(EnumType.STRING)
-	private EstadoConservacao conservado;
+	private EstadoConservacao estadoConservacao;
 	
 	private String urlImagem;
 	private LocalDate dataTroca;
@@ -31,10 +31,10 @@ public class Produto {
 	private LocalDateTime horarioTroca;
 	
 	public String getNome() {
-		return nome;
+		return nomeProduto;
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nomeProduto = nome;
 	}
 	public String getDetalhes() {
 		return detalhes;
@@ -43,16 +43,16 @@ public class Produto {
 		this.detalhes = detalhes;
 	}
 	public TrocaOuDoacao getTrocaOuDoacao() {
-		return troca;
+		return trocaOuDoacao;
 	}
 	public void setTrocaOuDoacao(TrocaOuDoacao trocaOuDoacao) {
-		this.troca = trocaOuDoacao;
+		this.trocaOuDoacao = trocaOuDoacao;
 	}
 	public EstadoConservacao getEstadoConservacao() {
-		return conservado;
+		return estadoConservacao;
 	}
 	public void setEstadoConservacao(EstadoConservacao estadoConservacao) {
-		this.conservado = estadoConservacao;
+		this.estadoConservacao = estadoConservacao;
 	}
 	public String getUrlImagem() {
 		return urlImagem;
