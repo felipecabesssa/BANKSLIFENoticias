@@ -30,11 +30,12 @@ public class Produto {
 	private String localDaTroca;
 	private LocalDateTime horarioTroca;
 	
-	public String getNome() {
+
+	public String getNomeProduto() {
 		return nomeProduto;
 	}
-	public void setNome(String nome) {
-		this.nomeProduto = nome;
+	public void setNomeProduto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
 	}
 	public String getDetalhes() {
 		return detalhes;
@@ -84,6 +85,7 @@ public class Produto {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	
 	
 
