@@ -14,13 +14,13 @@ import br.com.bankslife.trocatrocabks.repository.ProdutoRepository;
 public class HomeController {
 	
 	@Autowired
-	private ProdutoRepository repository;
+	private ProdutoRepository produtoRepository;
 
 	
 	@GetMapping("/home")
 	public String home(Model model) {
 		
-		List<Produto> produtos = repository.recuperaTodosOsProdutos();
+		List<Produto> produtos = produtoRepository.findAll();
 		model.addAttribute("produtos", produtos);		
 		return "home";
 	}
