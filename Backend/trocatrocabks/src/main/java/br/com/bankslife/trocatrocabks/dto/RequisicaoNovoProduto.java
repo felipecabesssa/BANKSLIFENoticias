@@ -1,11 +1,18 @@
 package br.com.bankslife.trocatrocabks.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import br.com.bankslife.trocatrocabks.modelo.Produto;
 
 public class RequisicaoNovoProduto {
 	
+	@NotBlank
 	private String nomeProduto;
+	
+	@NotBlank
 	private String urlImagem;
+	
+	@NotBlank
 	private String detalhes;
 	
 	public String getNomeProduto() {

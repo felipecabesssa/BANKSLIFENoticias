@@ -17,6 +17,7 @@ public class Produto {
 	private Long id;
 	
 	private String nomeProduto;
+
 	private String detalhes;
 	
 	@Enumerated(EnumType.STRING)
@@ -24,8 +25,9 @@ public class Produto {
 	
 	@Enumerated(EnumType.STRING)
 	private EstadoConservacao estadoConservacao;
-	
+
 	private String urlImagem;
+	
 	private LocalDate dataTroca;
 	private String localDaTroca;
 	private LocalDateTime horarioTroca;
