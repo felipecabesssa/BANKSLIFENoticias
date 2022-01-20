@@ -63,7 +63,7 @@
                                 <div>
                                     <textarea class="form-control" th:text="${produto.detalhes}">Falae como tá</textarea>
                                 </div>
-                                <div>Data da Troca/Doação: <span th:text="${produto.dataTroca}">22/02/2022</span></div>
+                                <div>Data da Troca/Doação: <span th:text="${#temporals.format(produto.dataTroca, 'dd/MM/yyyy')}">22/02/2022</span></div>
                             </div>
                         
                             <div class="col-12 col-sm-12 col-lg-4">
