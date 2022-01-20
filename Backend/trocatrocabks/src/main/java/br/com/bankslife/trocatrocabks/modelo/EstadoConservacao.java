@@ -5,5 +5,5 @@ public enum EstadoConservacao {
 	BOM,
 	RUIM,
 	DOISFLIP;
-
+	
 }
