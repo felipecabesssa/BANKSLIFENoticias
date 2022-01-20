@@ -33,7 +33,8 @@ public class HomeController {
 	@GetMapping("/{status}")
 	public String poStatus(@PathVariable("status") String status, Model model) {
 		List<Produto> produtos = produtoRepository.findByStatus(StatusProduto.valueOf(status.toUpperCase()));
-		model.addAttribute("produtos", produtos);		
+		model.addAttribute("produtos", produtos);
+		model.addAttribute("status", status);
 		return "home";
 	}
 	

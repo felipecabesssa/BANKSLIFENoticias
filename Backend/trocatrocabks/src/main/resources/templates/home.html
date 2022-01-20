@@ -10,10 +10,10 @@
 
             <nav class="navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between mb-3">
                 <div class="navbar-nav">
-                    <a class="nav-link active" href="/home">Todos</a>
-                    <a class="nav-link" href="/home/aguardando">Aguardando</a>
-                    <a class="nav-link" href="/home/emandamento">Em andamento</a>
-                    <a class="nav-link" href="/home/concluido">Concluido</a>
+                    <a th:classappend="${status} == null ? 'active'" class="nav-link" href="/home">Todos</a>
+                    <a th:classappend="${status} == 'aguardando' ? 'active'" class="nav-link" href="/home/aguardando">Aguardando</a>
+                    <a th:classappend="${status} == 'emandamento' ? 'active'" class="nav-link" href="/home/emandamento">Em andamento</a>
+                    <a th:classappend="${status} == 'concluido' ? 'active'" class="nav-link" href="/home/concluido">Concluido</a>
                 </div>
                 <a href="/produto/formulario"><button class="btn btn-outline-primary">Novo</button></a>
             </nav>
