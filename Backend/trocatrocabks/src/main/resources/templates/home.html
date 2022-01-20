@@ -18,7 +18,12 @@
                 <a href="/produto/formulario"><button class="btn btn-outline-primary">Novo</button></a>
             </nav>
             <div class="card p-3 mb-2 bg-secondary text-white" th:each="produto : ${produtos}">
-                <div class="card-header bg-primary" th:text="${produto.nomeProduto}">Nome do Produto</div>
+
+                <th:block th:switch="${produto.status.name()}">
+                    <div th:case="'AGUARDANDO'" class="card-header alert-warning" th:text="${produto.nomeProduto}">Nome do Produto</div>
+                    <div th:case="'EMANDAMENTO'" class="card-header alert-danger" th:text="${produto.nomeProduto}">Nome do Produto</div>
+                    <div th:case="'CONCLUIDO'" class="card-header alert-success" th:text="${produto.nomeProduto}">Nome do Produto</div>
+                </th:block>
 
                     <div class="card-body">
                         <div class="row">

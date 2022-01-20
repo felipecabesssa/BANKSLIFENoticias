@@ -32,6 +32,9 @@ public class Produto {
 	private String localDaTroca;
 	private LocalDateTime horarioTroca;
 	
+	@Enumerated(EnumType.STRING)
+	private StatusProduto status;
+	
 
 	public String getNomeProduto() {
 		return nomeProduto;
@@ -87,7 +90,14 @@ public class Produto {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	public StatusProduto getStatus() {
+		return status;
+	}
+	public void setStatus(StatusProduto status) {
+		this.status = status;
+	}
 
+	
 	
 	
 

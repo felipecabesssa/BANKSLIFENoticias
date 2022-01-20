@@ -33,7 +33,7 @@ public class ProdutoController {
 		
 		Produto produto = requisicao.toProduto();
 		produtoRepository.save(produto);
-		return "produto/formulario";
+		return "redirect:/home";
 		
 		
 	}

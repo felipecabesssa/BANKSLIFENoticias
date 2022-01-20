@@ -3,6 +3,7 @@ package br.com.bankslife.trocatrocabks.dto;
 import javax.validation.constraints.NotBlank;
 
 import br.com.bankslife.trocatrocabks.modelo.Produto;
+import br.com.bankslife.trocatrocabks.modelo.StatusProduto;
 
 public class RequisicaoNovoProduto {
 	
@@ -38,6 +39,7 @@ public class RequisicaoNovoProduto {
 		produto.setNomeProduto(nomeProduto);
 		produto.setDetalhes(detalhes);
 		produto.setUrlImagem(urlImagem);
+		produto.setStatus(StatusProduto.AGUARDANDO);
 		return produto;
 	}
 	
