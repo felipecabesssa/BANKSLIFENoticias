@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.bankslife.trocatrocabks.enums.StatusProduto;
 import br.com.bankslife.trocatrocabks.modelo.Produto;
-import br.com.bankslife.trocatrocabks.modelo.StatusProduto;
 import br.com.bankslife.trocatrocabks.repository.ProdutoRepository;
 
 @Controller
@@ -31,7 +31,7 @@ public class HomeController {
 	}
 	
 	@GetMapping("/{status}")
-	public String poStatus(@PathVariable("status") String status, String estadoConservacao, String TrocaOuDoacao, Model model) {
+	public String porStatus(@PathVariable("status") String status, String estadoConservacao, String TrocaOuDoacao, Model model) {
 		List<Produto> produtos = produtoRepository.findByStatus(StatusProduto.valueOf(status.toUpperCase()));
 		model.addAttribute("produtos", produtos);
 		model.addAttribute("status", status);

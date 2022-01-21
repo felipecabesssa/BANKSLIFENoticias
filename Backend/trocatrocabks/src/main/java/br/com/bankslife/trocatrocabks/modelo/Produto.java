@@ -10,6 +10,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import br.com.bankslife.trocatrocabks.enums.EstadoConservacao;
+import br.com.bankslife.trocatrocabks.enums.StatusProduto;
+import br.com.bankslife.trocatrocabks.enums.TrocaOuDoacao;
+
 @Entity
 public class Produto {
 	

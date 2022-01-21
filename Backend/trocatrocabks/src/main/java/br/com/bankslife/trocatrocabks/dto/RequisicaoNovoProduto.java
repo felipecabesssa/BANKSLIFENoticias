@@ -2,10 +2,10 @@ package br.com.bankslife.trocatrocabks.dto;
 
 import javax.validation.constraints.NotBlank;
 
-import br.com.bankslife.trocatrocabks.modelo.EstadoConservacao;
+import br.com.bankslife.trocatrocabks.enums.EstadoConservacao;
+import br.com.bankslife.trocatrocabks.enums.StatusProduto;
+import br.com.bankslife.trocatrocabks.enums.TrocaOuDoacao;
 import br.com.bankslife.trocatrocabks.modelo.Produto;
-import br.com.bankslife.trocatrocabks.modelo.StatusProduto;
-import br.com.bankslife.trocatrocabks.modelo.TrocaOuDoacao;
 
 public class RequisicaoNovoProduto {
 	
@@ -17,6 +17,10 @@ public class RequisicaoNovoProduto {
 	
 	@NotBlank
 	private String detalhes;
+	
+	private String trocaOuDoacao;
+	
+	private String estadoConservacao;
 	
 	public String getNomeProduto() {
 		return nomeProduto;
@@ -35,6 +39,18 @@ public class RequisicaoNovoProduto {
 	}
 	public void setDetalhes(String detalhes) {
 		this.detalhes = detalhes;
+	}
+	public String getTrocaOuDoacao() {
+		return trocaOuDoacao;
+	}
+	public void setTrocaOuDoacao(String trocaOuDoacao) {
+		this.trocaOuDoacao = trocaOuDoacao;
+	}
+	public String getEstadoConservacao() {
+		return estadoConservacao;
+	}
+	public void setEstadoConservacao(String estadoConservacao) {
+		this.estadoConservacao = estadoConservacao;
 	}
 	public Produto toProduto() {
 		Produto produto = new Produto();

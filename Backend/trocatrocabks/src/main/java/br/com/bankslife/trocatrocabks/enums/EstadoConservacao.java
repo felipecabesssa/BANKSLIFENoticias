@@ -1,4 +1,4 @@
-package br.com.bankslife.trocatrocabks.modelo;
+package br.com.bankslife.trocatrocabks.enums;
 
 public enum EstadoConservacao {
 	

@@ -1,8 +1,8 @@
-package br.com.bankslife.trocatrocabks.modelo;
+package br.com.bankslife.trocatrocabks.enums;
 
 public enum TrocaOuDoacao {
 	
 	TROCA,
 	DOACAO;
-
+	
 }
