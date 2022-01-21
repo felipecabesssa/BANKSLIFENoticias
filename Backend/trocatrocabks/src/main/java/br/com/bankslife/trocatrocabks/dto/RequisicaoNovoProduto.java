@@ -11,16 +11,14 @@ public class RequisicaoNovoProduto {
 	
 	@NotBlank
 	private String nomeProduto;
-	
 	@NotBlank
 	private String urlImagem;
-	
 	@NotBlank
 	private String detalhes;
-	
 	private String trocaOuDoacao;
-	
 	private String estadoConservacao;
+	private String nomeApelidoDoador;
+	private String instaDoador;
 	
 	public String getNomeProduto() {
 		return nomeProduto;
@@ -52,6 +50,19 @@ public class RequisicaoNovoProduto {
 	public void setEstadoConservacao(String estadoConservacao) {
 		this.estadoConservacao = estadoConservacao;
 	}
+	
+	public String getNomeApelidoDoador() {
+		return nomeApelidoDoador;
+	}
+	public void setNomeApelidoDoador(String nomeApelidoDoador) {
+		this.nomeApelidoDoador = nomeApelidoDoador;
+	}
+	public String getInstaDoador() {
+		return instaDoador;
+	}
+	public void setInstaDoador(String instaDoador) {
+		this.instaDoador = instaDoador;
+	}
 	public Produto toProduto() {
 		Produto produto = new Produto();
 		produto.setNomeProduto(nomeProduto);
@@ -60,6 +71,8 @@ public class RequisicaoNovoProduto {
 		produto.setStatus(StatusProduto.AGUARDANDO);
 		produto.setEstadoConservacao(EstadoConservacao.BOM);
 		produto.setTrocaOuDoacao(TrocaOuDoacao.DOACAO);
+		produto.setNomeApelidoDoador(nomeApelidoDoador);
+		produto.setInstaDoador(instaDoador);
 		return produto;
 	}
 	

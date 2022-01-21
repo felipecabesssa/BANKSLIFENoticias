@@ -1,8 +1,5 @@
 package br.com.bankslife.trocatrocabks.modelo;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -21,24 +18,19 @@ public class Produto {
 	private Long id;
 	
 	private String nomeProduto;
-
 	private String detalhes;
+	private String urlImagem;
+	private String nomeApelidoDoador;
+	private String instaDoador;
 	
 	@Enumerated(EnumType.STRING)
 	private TrocaOuDoacao trocaOuDoacao;
 	
 	@Enumerated(EnumType.STRING)
 	private EstadoConservacao estadoConservacao;
-
-	private String urlImagem;
-	
-	private LocalDate dataTroca;
-	private String localDaTroca;
-	private LocalDateTime horarioTroca;
 	
 	@Enumerated(EnumType.STRING)
 	private StatusProduto status;
-	
 
 	public String getNomeProduto() {
 		return nomeProduto;
@@ -70,24 +62,7 @@ public class Produto {
 	public void setUrlImagem(String urlImagem) {
 		this.urlImagem = urlImagem;
 	}
-	public LocalDate getDataTroca() {
-		return dataTroca;
-	}
-	public void setDataTroca(LocalDate dataTroca) {
-		this.dataTroca = dataTroca;
-	}
-	public String getLocalDaTroca() {
-		return localDaTroca;
-	}
-	public void setLocalDaTroca(String localDaTroca) {
-		this.localDaTroca = localDaTroca;
-	}
-	public LocalDateTime getHorarioTroca() {
-		return horarioTroca;
-	}
-	public void setHorarioTroca(LocalDateTime horarioTroca) {
-		this.horarioTroca = horarioTroca;
-	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -99,6 +74,18 @@ public class Produto {
 	}
 	public void setStatus(StatusProduto status) {
 		this.status = status;
+	}
+	public String getNomeApelidoDoador() {
+		return nomeApelidoDoador;
+	}
+	public void setNomeApelidoDoador(String nomeApelidoDoador) {
+		this.nomeApelidoDoador = nomeApelidoDoador;
+	}
+	public String getInstaDoador() {
+		return instaDoador;
+	}
+	public void setInstaDoador(String instaDoador) {
+		this.instaDoador = instaDoador;
 	}
 	
 
