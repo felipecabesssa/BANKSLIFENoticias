@@ -8,8 +8,8 @@ public class Troca {
 	private LocalDate dataTroca;
 	private String localDaTroca;
 	private LocalDateTime horarioTroca;
-	private String nomeApelidoDoador;
-	private String instaDoador;
+	private String nomeApelidoRecebedor;
+	private String instaRecebedor;
 	
 	public LocalDate getDataTroca() {
 		return dataTroca;
@@ -30,16 +30,16 @@ public class Troca {
 		this.horarioTroca = horarioTroca;
 	}
 	public String getNomeApelidoDoador() {
-		return nomeApelidoDoador;
+		return nomeApelidoRecebedor;
 	}
 	public void setNomeApelidoDoador(String nomeApelidoDoador) {
-		this.nomeApelidoDoador = nomeApelidoDoador;
+		this.nomeApelidoRecebedor = nomeApelidoDoador;
 	}
 	public String getInstaDoador() {
-		return instaDoador;
+		return instaRecebedor;
 	}
 	public void setInstaDoador(String instaDoador) {
-		this.instaDoador = instaDoador;
+		this.instaRecebedor = instaDoador;
 	}
 	
 

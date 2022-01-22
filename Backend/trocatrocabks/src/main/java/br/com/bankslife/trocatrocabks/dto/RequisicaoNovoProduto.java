@@ -17,7 +17,9 @@ public class RequisicaoNovoProduto {
 	private String detalhes;
 	private String trocaOuDoacao;
 	private String estadoConservacao;
+	@NotBlank
 	private String nomeApelidoDoador;
+	@NotBlank
 	private String instaDoador;
 	
 	public String getNomeProduto() {

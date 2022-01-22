@@ -76,11 +76,17 @@
                     <div class="form-group mt-2 mb-2">
                         <input th:field="*{nomeApelidoDoador}" th:errorclass="is-invalid" class="form-control"
                         placeholder="Seu Nome ou Apelido" />
+                        <div class="invalid-feedback" th:errors="*{nomeApelidoDoador}">
+                            Erros do nome do produto
+                        </div>
                     </div>
                     <div class="input-group mb-1">
                         <span class="input-group-text" id="basic-addon1">@</span>
                         <input th:field="*{instaDoador}" th:errorclass="is-invalid" class="form-control"
                         placeholder="Seu Instagram" />
+                        <div class="invalid-feedback" th:errors="*{instaDoador}">
+                            Erros do nome do produto
+                        </div>
                     </div>
                     
                 </div>
