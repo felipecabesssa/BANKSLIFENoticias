@@ -9,5 +9,4 @@ public class TrocatrocabksApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TrocatrocabksApplication.class, args);
 	}
-
 }
