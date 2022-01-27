@@ -8,6 +8,7 @@
 			@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Eater&family=Englebert&family=Jolly+Lodger&family=Libre+Barcode+39+Text&family=Rubik+Beastly&family=UnifrakturCook:wght@700&family=Waiting+for+the+Sunrise&display=swap');
 			body{
 				color: #c5ccd3;
+				overflow-x: hidden;
 			}
 			.logo-container{
 				background-color: #4d79ff;
@@ -27,13 +28,11 @@
 				font-size: 80px;
 				border-right: solid 1px #c5ccd3;
 			}
-			.iconesHome{
-				margin-left: -15px;
-				padding-right: 5px;
-			}
+			
 			.posicaoVideoHome{
 				padding-top: 20px;
-				padding-left: 20px;
+				padding-left: 5px;
+				padding-right: 5px;
 			}
 			.listaVideosDestaque{
 				margin-top: 30px;
@@ -48,7 +47,10 @@
 			}
 			.instaNois h1{
 				text-align: center;
-			}  
+			} 
+			table tr th{
+				padding: 15px;
+			} 
 		</style>
 	</head>
 
@@ -73,7 +75,8 @@
 				</div>
 				<div class="col-11">
 					<div class="row">
-						<div class="col-5 videos videosDestaque">
+						<div class="col-5 videos videosDestaque instaNois">
+							<h1>Champs/Destaques</h1>
 							<iframe class="posicaoVideoHome" width="700" height="400" src="https://www.youtube.com/embed/Neo3E3Ht3pY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							
 							<ul class="listaVideosDestaque">
@@ -88,7 +91,55 @@
 							<div class="instaNois">
 								<h1>#InstaNois</h1>
 
-								<img src="../img/1.jpg" class="img-fluid" alt="Imagem responsiva">
+								<div>
+									<table>
+										<tr>
+											<th>
+												<div class="card" style="width: 18rem;">
+													<img class="card-img-top" src="assets/img/2.png" alt="Imagem de capa do card">
+													<div class="card-body">
+														<h5 class="card-title">Título do card</h5>
+														<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+													</div>
+													<ul class="list-group list-group-flush">
+														<a href="#" class="card-link"><li class="list-group-item">Cras justo odio</li></a>
+														<li class="list-group-item">Dapibus ac facilisis in</li>
+														<li class="list-group-item">Vestibulum at eros</li>
+													</ul>
+												</div>
+											</th>
+											<th>
+												<div class="card" style="width: 18rem;">
+													<img class="card-img-top" src="assets/img/2.png" alt="Imagem de capa do card">
+													<div class="card-body">
+														<h5 class="card-title">Título do card</h5>
+														<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+													</div>
+													<ul class="list-group list-group-flush">
+														<a href="#" class="card-link"><li class="list-group-item">Cras justo odio</li></a>
+														<li class="list-group-item">Dapibus ac facilisis in</li>
+														<li class="list-group-item">Vestibulum at eros</li>
+													</ul>
+												</div>
+											</th>
+											<th>
+												<div class="card" style="width: 18rem;">
+													<img class="card-img-top" src="assets/img/2.png" alt="Imagem de capa do card">
+													<div class="card-body">
+														<h5 class="card-title">Título do card</h5>
+														<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+													</div>
+													<ul class="list-group list-group-flush">
+														<a href="#" class="card-link"><li class="list-group-item">Cras justo odio</li></a>
+														<li class="list-group-item">Dapibus ac facilisis in</li>
+														<li class="list-group-item">Vestibulum at eros</li>
+													</ul>
+												</div>
+											</th>
+										</tr>
+									</tr>		
+								</div>
+								
 							</div>
 							
 							
