@@ -114,7 +114,7 @@ table tr th {
 
 table a {
     text-decoration: none;
-    color: #212529;
+    color: #c5ccd3
 }
 
 table a:hover {
@@ -135,6 +135,13 @@ table a:hover {
     margin-top: 20px;
     padding: 40px;
 }
+.divEventos img{
+    width: 500px;
+    height: 666px;
+}
+.divEventos h1{
+    margin-bottom: 33px;
+}
 
 .divAgenda {
     border-left: solid 1px #c5ccd3;
@@ -142,8 +149,9 @@ table a:hover {
 }
 
 .tabelaCalendario {
+    font-size: 8px;
     border: solid 1px #c5ccd3;
-    margin-top: -10px;
+    margin-top: 80px;
 }
 .tabelaCalendario th{
     text-align: center;
