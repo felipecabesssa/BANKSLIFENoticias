@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Eater&family=Englebert&family=Jolly+Lodger&family=Libre+Barcode+39+Text&family=Rubik+Beastly&family=UnifrakturCook:wght@700&family=Waiting+for+the+Sunrise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Denk+One&family=Faster+One&family=Loved+by+the+King&family=Mouse+Memoirs&family=Ole&family=Road+Rage&family=Seaweed+Script&family=Six+Caps&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #c5ccd3;
+    overflow-x: hidden;
+    margin-top: 70px;
+}
+
+h1 {
+    text-align: center;
+    background-color: #212529;
+    color: #4d79ff;
+}
+h3{
+    color: #4d79ff;
+}
+
+.imagemFundo {
+    background-image: url('../img/fundos/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid 1px #c5ccd3;
+}
+
+.logo-container {
+    background-color: #4d79ff;
+}
+
+.logo-container span {
+    font-family: 'Denk One', sans-serif;
+    color: #212529;
+}
+
+.logo {
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+.iconLogin {
+    padding-right: 15px;
+}
+
+.menuIcones {
+    list-style: none;
+    font-size: 70px;
+    border-right: solid 1px #c5ccd3;
+}
+
+.fixoEsquerda {
+    height: 100%;
+    /* Full-height: remove this if you want "auto" height */
+    width: 130px;
+    /* Set the width of the sidebar */
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 7%;
+    /* Stay at the top */
+    left: 0;
+    background-color: #212529;
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+.posicaoVideoHome {
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+iframe {
+    margin-top: -22px;
+}
+
+.listaVideosDestaque {
+    background-color: #212529;
+    color: #c5ccd3;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.listaVideosDestaque li a {
+    color: #c5ccd3;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.listaVideosDestaque li a:hover {
+    color: #4d79ff;
+}
+
+.videosDestaque {
+    border-right: solid 1px #c5ccd3;
+}
+
+table {
+    margin-left: 40px;
+}
+
+table tr {
+    max-height: 200px;
+}
+
+table tr th {
+    padding: 15px;
+}
+
+table a {
+    text-decoration: none;
+    color: #212529;
+}
+
+table a:hover {
+    color: #4d79ff;
+}
+
+.promo {
+    background-color: #212529;
+    position: fixed;
+    width: 541px;
+    height: 120rem;
+    bottom: 100px;
+    top: 7%;
+    right: 62%;
+}
+
+.divEventos {
+    margin-top: 20px;
+    padding: 40px;
+}
+
+.divAgenda {
+    border-left: solid 1px #c5ccd3;
+
+}
+
+.tabelaCalendario {
+    border: solid 1px #c5ccd3;
+    margin-top: -10px;
+}
+.tabelaCalendario th{
+    text-align: center;
+    border: solid 1px #c5ccd3;
+}
