@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import br.com.bankslife.trocatrocabks.enums.EstadoConservacao;
 import br.com.bankslife.trocatrocabks.enums.StatusProduto;
 import br.com.bankslife.trocatrocabks.enums.TrocaOuDoacao;
 
@@ -23,11 +22,10 @@ public class Produto {
 	private String nomeApelidoDoador;
 	private String instaDoador;
 	
-	@Enumerated(EnumType.STRING)
-	private TrocaOuDoacao trocaOuDoacao;
+	
 	
 	@Enumerated(EnumType.STRING)
-	private EstadoConservacao estadoConservacao;
+	private TrocaOuDoacao trocaOuDoacao;
 	
 	@Enumerated(EnumType.STRING)
 	private StatusProduto status;
@@ -50,12 +48,7 @@ public class Produto {
 	public void setTrocaOuDoacao(TrocaOuDoacao trocaOuDoacao) {
 		this.trocaOuDoacao = trocaOuDoacao;
 	}
-	public EstadoConservacao getEstadoConservacao() {
-		return estadoConservacao;
-	}
-	public void setEstadoConservacao(EstadoConservacao estadoConservacao) {
-		this.estadoConservacao = estadoConservacao;
-	}
+	
 	public String getUrlImagem() {
 		return urlImagem;
 	}
@@ -87,6 +80,7 @@ public class Produto {
 	public void setInstaDoador(String instaDoador) {
 		this.instaDoador = instaDoador;
 	}
-	
 
+
+	
 }

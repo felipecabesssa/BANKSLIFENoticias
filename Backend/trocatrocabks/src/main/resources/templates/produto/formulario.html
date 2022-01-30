@@ -3,98 +3,82 @@
 <head th:replace="~{base :: head}"></head>
 
 <body class="mb-2 bg-dark text-white">
-    <div th:replace="~{base :: logo}"></div>
-    <div class="container">
-        <div class="mb-5">
-            <h1 class="text-primary">Produtos</h1>
-        </div>
-        <div class="card bg-secondary text-white mt-3">
-            <form th:object="${requisicaoNovoProduto}" class="card-body" action="/produto/novo" method="POST">
-                <div class="form-group mt-2">
-                    <label for="nomeProduto">Produto</label>
-                    <input th:field="*{nomeProduto}" th:errorclass="is-invalid" class="form-control"
-                        placeholder="Nome do produto" />
-                    <small>Informa qual o nome do produto</small>
-                    <div class="invalid-feedback" th:errors="*{nomeProduto}">
-                        Erros do nome do produto
-                    </div>
-                </div>
-                <div class="form-group mt-2">
-                    <label for="urlImagem">Imagem</label>
-                    <input th:field="*{urlImagem}" th:errorclass="is-invalid" class="form-control"
-                        placeholder="url da imagem" />
-                    <small>Depois essa URL sera trocada por opção de upar arquivo de img</small>
-                    <div class="invalid-feedback" th:errors="*{urlImagem}">
-                        Erros da imagem do produto
-                    </div>
-                </div>
-                <div class="form-group mt-2">
-                    <label for="detalhes">Detalhes</label>
-                    <textarea th:field="*{detalhes}" th:errorclass="is-invalid" class="form-control"
-                        placeholder="Detalhes/Descrição"></textarea>
-                    <div class="invalid-feedback" th:errors="*{detalhes}">
-                        Erros da descrição do produto
-                    </div>
-                </div>
-                <div class="row mt-3 mb-3">
-                    <div class="col-md-4">
-                        <div>Estado de conservação</div>
-                        <!--<div>Bom, Ruim ou DoisFlip</div>-->
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Bom</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Ruim</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                value="option3">
-                            <label class="form-check-label" for="inlineRadio3">+2Flip</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div>Troca ou Doação</div>
-                        <!-- <input th:field="*{trocaOuDoacao}" class="form-control" placeholder="Troca ou doa" /> -->
+	<div th:replace="~{base :: logo}"></div>
+	<div class="container">
+		<div class="mb-5">
+			<h1 class="text-primary">Produtos</h1>
+		</div>
+		<div class="card bg-secondary text-white mt-3">
+			<form th:object="${requisicaoNovoProduto}" class="card-body" action="/produto/novo" method="POST">
+				<div class="form-group mt-2">
+					<label for="nomeProduto">Produto</label>
+					<input th:field="*{nomeProduto}" th:errorclass="is-invalid" class="form-control"
+						placeholder="Nome do produto" />
+					<small>Informa qual o nome do produto</small>
+					<div class="invalid-feedback" th:errors="*{nomeProduto}">
+						Erros do nome do produto
+					</div>
+				</div>
+				<div class="form-group mt-2">
+					<label for="urlImagem">Imagem</label>
+					<input th:field="*{urlImagem}" th:errorclass="is-invalid" class="form-control"
+						placeholder="url da imagem" />
+					<small>Depois essa URL sera trocada por opção de upar arquivo de img</small>
+					<div class="invalid-feedback" th:errors="*{urlImagem}">
+						Erros da imagem do produto
+					</div>
+				</div>
+				<div class="form-group mt-2">
+					<label for="detalhes">Detalhes</label>
+					<textarea th:field="*{detalhes}" th:errorclass="is-invalid" class="form-control"
+						placeholder="Detalhes/Descrição"></textarea>
+					<div class="invalid-feedback" th:errors="*{detalhes}">
+						Erros da descrição do produto
+					</div>
+				</div>
+				<div class="row mt-3 mb-3">
+					<!-- <div>Bom, Ruim ou DoisFlip</div> -->
+					
+				</div>
+				<div class="col-md-4 mb-3">
+					<div>Troca ou Doação</div>
+					<!-- <input th:field="*{trocaOuDoacao}" class="form-control" placeholder="Troca ou doa" /> -->
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
-                                value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Troca</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Doação</label>
-                        </div>
-                    </div>
-                    <hr>
-                    <div>Identificação:</div>
-                    <div class="form-group mt-2 mb-2">
-                        <input th:field="*{nomeApelidoDoador}" th:errorclass="is-invalid" class="form-control"
-                        placeholder="Seu Nome ou Apelido" />
-                        <div class="invalid-feedback" th:errors="*{nomeApelidoDoador}">
-                            Erros do nome do produto
-                        </div>
-                    </div>
-                    <div class="input-group mb-1">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input th:field="*{instaDoador}" th:errorclass="is-invalid" class="form-control"
-                        placeholder="Seu Instagram" />
-                        <div class="invalid-feedback" th:errors="*{instaDoador}">
-                            Erros do nome do produto
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <button class="btn btn-primary mt-3" type="submit">Cadastrar</button>
-            </form>
-        </div>
-    </div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
+							value="option1">
+						<label class="form-check-label" for="inlineRadio1">Troca</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2"
+							value="option2">
+						<label class="form-check-label" for="inlineRadio2">Doação</label>
+					</div>
+				</div>
+				<hr>
+				<div>Identificação:</div>
+				<div class="form-group mt-2 mb-2">
+					<input th:field="*{nomeApelidoDoador}" th:errorclass="is-invalid" class="form-control"
+						placeholder="Seu Nome ou Apelido" />
+					<div class="invalid-feedback" th:errors="*{nomeApelidoDoador}">
+						Erros do nome do produto
+					</div>
+				</div>
+				<div class="input-group mb-1">
+					<span class="input-group-text" id="basic-addon1">@</span>
+					<input th:field="*{instaDoador}" th:errorclass="is-invalid" class="form-control"
+						placeholder="Seu Instagram" />
+					<div class="invalid-feedback" th:errors="*{instaDoador}">
+						Erros do nome do produto
+					</div>
+				</div>
+
+		</div>
+
+		<button class="btn btn-primary mt-3" type="submit">Cadastrar</button>
+		</form>
+	</div>
+	</div>
 </body>
 
 </html>

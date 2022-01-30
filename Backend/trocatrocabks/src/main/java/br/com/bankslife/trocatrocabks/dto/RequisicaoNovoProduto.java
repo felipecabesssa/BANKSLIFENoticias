@@ -2,7 +2,6 @@ package br.com.bankslife.trocatrocabks.dto;
 
 import javax.validation.constraints.NotBlank;
 
-import br.com.bankslife.trocatrocabks.enums.EstadoConservacao;
 import br.com.bankslife.trocatrocabks.enums.StatusProduto;
 import br.com.bankslife.trocatrocabks.enums.TrocaOuDoacao;
 import br.com.bankslife.trocatrocabks.modelo.Produto;
@@ -16,7 +15,7 @@ public class RequisicaoNovoProduto {
 	@NotBlank
 	private String detalhes;
 	private String trocaOuDoacao;
-	private String estadoConservacao;
+	
 	@NotBlank
 	private String nomeApelidoDoador;
 	@NotBlank
@@ -46,12 +45,6 @@ public class RequisicaoNovoProduto {
 	public void setTrocaOuDoacao(String trocaOuDoacao) {
 		this.trocaOuDoacao = trocaOuDoacao;
 	}
-	public String getEstadoConservacao() {
-		return estadoConservacao;
-	}
-	public void setEstadoConservacao(String estadoConservacao) {
-		this.estadoConservacao = estadoConservacao;
-	}
 	
 	public String getNomeApelidoDoador() {
 		return nomeApelidoDoador;
@@ -66,12 +59,11 @@ public class RequisicaoNovoProduto {
 		this.instaDoador = instaDoador;
 	}
 	public Produto toProduto() {
-		Produto produto = new Produto();
+		Produto produto = new Produto();		
 		produto.setNomeProduto(nomeProduto);
 		produto.setDetalhes(detalhes);
 		produto.setUrlImagem(urlImagem);
 		produto.setStatus(StatusProduto.AGUARDANDO);
-		produto.setEstadoConservacao(EstadoConservacao.BOM);
 		produto.setTrocaOuDoacao(TrocaOuDoacao.DOACAO);
 		produto.setNomeApelidoDoador(nomeApelidoDoador);
 		produto.setInstaDoador(instaDoador);

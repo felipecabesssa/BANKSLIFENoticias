@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring Boot Thymeleaf Application - Bootstrap Radio Buttons</title>
+
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+
+<div class="container">
+    <form method="post" th:object="${car}" class="mt-5">
+        <div class="form-group">
+            <label>Model</label>
+            <div th:each="model : ${T(br.com.bankslife.trocatrocabks.modelo.CarModel).values()}">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" th:field="*{carModel}" th:value="${model}" class="custom-control-input">
+                    <label class="custom-control-label" th:for="${#ids.prev('carModel')}" th:text="${model}">model</label>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
