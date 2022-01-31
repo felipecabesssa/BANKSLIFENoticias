@@ -37,18 +37,27 @@
 					</div>
 				</div>
 				<div class="form-group mt-3 mb-3">
-					<!-- <div>Bom, Ruim ou DoisFlip</div> -->
-					<!-- <select path="optativa" multiple="true">
+					<div>Estado de conservação</div>
+					<select class="form-select" name="estadoConservacao">
+						<option th:each="estado : ${T(br.com.bankslife.trocatrocabks.enums.EstadoConservacao).values()}"
+								th:value="${estado}" th:text="${estado}"></option>		
+					</select>
+				
+					
+					<!-- Aqui setamos os valores na mão
+						 Acima usando o thymeleaf p/ pegar a lista de Enuns e atribuir ao value
+					<select path="optativa" multiple="true">
 						<option value="Bom" label="Bom"/>
 						<option value="Ruim" label="Ruim"/>
 						<option value="MaisDoisFlip" label="MaisDoisFlip"/>
 					</select> -->
-					<div>Estado de conservação</div>
-					<div class="input-group">
-						<input type="radio" name="estadoConservacao" value="Bom"> Bom</input>
-						<input type="radio" name="estadoConservacao" value="Ruim"> Ruim</input>
-						<input type="radio" name="estadoConservacao" value="MaisDoisFlip"> MaisDoisFlip</input>
-					</div>
+					
+					<!-- <div class="input-group form-group">
+						<input type="radio" name="estadoConservacao" value="Bom">Bom</input>
+						<input type="radio" name="estadoConservacao" value="Ruim">Ruim</input>
+						<input type="radio" name="estadoConservacao" value="MaisDoisFlip">MaisDoisFlip</input>
+					</div> -->
+						
 				</div>
 				<div class="col-md-4 mb-3">
 					<div>Troca ou Doação</div>

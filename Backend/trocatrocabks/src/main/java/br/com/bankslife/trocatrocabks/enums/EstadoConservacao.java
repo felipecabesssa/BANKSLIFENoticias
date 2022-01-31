@@ -4,6 +4,8 @@ public enum EstadoConservacao {
 	
 	BOM,
 	RUIM,
-	DOISFLIP;
+	DOISFLIP,
+	JOGANOMATO,
+	KICKNOSE
 	
 }
