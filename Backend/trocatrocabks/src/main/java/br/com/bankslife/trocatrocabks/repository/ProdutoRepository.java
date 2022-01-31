@@ -17,3 +17,4 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
 	List<Produto> findByTrocaOuDoacao(TrocaOuDoacao trocaOuDoacao);
 		
 }
+
