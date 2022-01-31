@@ -29,7 +29,7 @@ public class ProdutoController {
 	public String novo(@Valid RequisicaoNovoProduto requisicao, BindingResult result) {
 		if(result.hasErrors()) {
 			return "produto/formulario";
-		}
+		}	
 		
 		Produto produto = requisicao.toProduto();
 		produtoRepository.save(produto);
