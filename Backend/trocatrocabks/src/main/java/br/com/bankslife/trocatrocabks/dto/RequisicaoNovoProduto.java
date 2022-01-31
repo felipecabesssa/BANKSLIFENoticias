@@ -16,6 +16,8 @@ public class RequisicaoNovoProduto {
 	private String detalhes;
 	private String trocaOuDoacao;
 	
+	private String estadoConservacao;
+	
 	@NotBlank
 	private String nomeApelidoDoador;
 	@NotBlank
@@ -58,18 +60,18 @@ public class RequisicaoNovoProduto {
 	public void setInstaDoador(String instaDoador) {
 		this.instaDoador = instaDoador;
 	}
+	
+	
 	public Produto toProduto() {
 		Produto produto = new Produto();		
 		produto.setNomeProduto(nomeProduto);
 		produto.setDetalhes(detalhes);
 		produto.setUrlImagem(urlImagem);
+		produto.setEstadoConservacao(estadoConservacao);
 		produto.setStatus(StatusProduto.AGUARDANDO);
 		produto.setTrocaOuDoacao(TrocaOuDoacao.DOACAO);
 		produto.setNomeApelidoDoador(nomeApelidoDoador);
 		produto.setInstaDoador(instaDoador);
 		return produto;
 	}
-	
-	
-
 }

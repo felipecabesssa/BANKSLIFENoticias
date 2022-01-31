@@ -35,7 +35,6 @@ public class HomeController {
 		List<Produto> produtos = produtoRepository.findByStatus(StatusProduto.valueOf(status.toUpperCase()));
 		model.addAttribute("produtos", produtos);
 		model.addAttribute("status", status);
-		model.addAttribute("estadoConservacao", estadoConservacao);
 		model.addAttribute("trocaOuDoacao", TrocaOuDoacao);
 		return "home";
 	}

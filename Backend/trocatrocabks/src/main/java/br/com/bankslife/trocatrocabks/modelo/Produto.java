@@ -22,7 +22,7 @@ public class Produto {
 	private String nomeApelidoDoador;
 	private String instaDoador;
 	
-	
+	private String estadoConservacao;
 	
 	@Enumerated(EnumType.STRING)
 	private TrocaOuDoacao trocaOuDoacao;
@@ -80,7 +80,11 @@ public class Produto {
 	public void setInstaDoador(String instaDoador) {
 		this.instaDoador = instaDoador;
 	}
-
-
+	public String getEstadoConservacao() {
+		return estadoConservacao;
+	}
+	public void setEstadoConservacao(String estadoConservacao) {
+		this.estadoConservacao = estadoConservacao;
+	}
 	
 }
