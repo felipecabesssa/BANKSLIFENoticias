@@ -77,7 +77,7 @@ public class RequisicaoNovoProduto {
 		produto.setUrlImagem(urlImagem);
 		produto.setEstadoConservacao(EstadoConservacao.valueOf(estadoConservacao));
 		produto.setStatus(StatusProduto.AGUARDANDO);
-		produto.setTrocaOuDoacao(TrocaOuDoacao.DOACAO);
+		produto.setTrocaOuDoacao(TrocaOuDoacao.valueOf(trocaOuDoacao));
 		produto.setNomeApelidoDoador(nomeApelidoDoador);
 		produto.setInstaDoador(instaDoador);
 		return produto;
