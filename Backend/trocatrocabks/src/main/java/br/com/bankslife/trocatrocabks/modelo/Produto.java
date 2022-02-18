@@ -6,6 +6,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import br.com.bankslife.trocatrocabks.enums.EstadoConservacao;
 import br.com.bankslife.trocatrocabks.enums.StatusProduto;
@@ -20,6 +21,10 @@ public class Produto {
 	private String nomeProduto;
 	private String detalhes;
 	private String urlImagem;
+	
+	@Lob
+	private byte[] imagem;
+	
 	private String nomeApelidoDoador;
 	private String instaDoador;
 	
@@ -87,6 +92,12 @@ public class Produto {
 	}
 	public void setEstadoConservacao(EstadoConservacao estadoConservacao) {
 		this.estadoConservacao = estadoConservacao;
+	}
+	public byte[] getImagem() {
+		return imagem;
+	}
+	public void setImagem(byte[] imagem) {
+		this.imagem = imagem;
 	}
 	
 	

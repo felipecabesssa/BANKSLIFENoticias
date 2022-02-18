@@ -13,6 +13,9 @@ public class RequisicaoNovoProduto {
 	private String nomeProduto;
 	@NotBlank
 	private String urlImagem;
+	
+	private byte[] imagem;
+	
 	@NotBlank
 	private String detalhes;
 	private String trocaOuDoacao;
@@ -61,7 +64,12 @@ public class RequisicaoNovoProduto {
 	public void setInstaDoador(String instaDoador) {
 		this.instaDoador = instaDoador;
 	}
-	
+	public byte[] getImagem() {
+		return imagem;
+	}
+	public void setImagem(byte[] imagem) {
+		this.imagem = imagem;
+	}	
 	
 	
 	public String getEstadoConservacao() {
@@ -75,6 +83,9 @@ public class RequisicaoNovoProduto {
 		produto.setNomeProduto(nomeProduto);
 		produto.setDetalhes(detalhes);
 		produto.setUrlImagem(urlImagem);
+		
+		produto.setImagem(getImagem());
+		
 		produto.setEstadoConservacao(EstadoConservacao.valueOf(estadoConservacao));
 		produto.setStatus(StatusProduto.AGUARDANDO);
 		produto.setTrocaOuDoacao(TrocaOuDoacao.valueOf(trocaOuDoacao));
@@ -82,4 +93,5 @@ public class RequisicaoNovoProduto {
 		produto.setInstaDoador(instaDoador);
 		return produto;
 	}
+
 }
