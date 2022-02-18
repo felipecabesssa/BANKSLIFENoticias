@@ -1,0 +1,39 @@
+.fixoEsquerda {
+    height: 100%;
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 7%;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.fixoTopo ul li {
+    display: inline-block;
+    padding-right: 4px;
+    font-size: 70px;
+}
+
+a spam {
+    font-size: 5em;
+}
+
+.menu__icones {
+    font-size: 20px;
+}
+
+.navMobile {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+    font-size: 70px;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .navMobile {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
