@@ -19,3 +19,13 @@
 .listaVideosDestaque {
     padding-bottom: 1rem;
 }
+
+.tabelaCalendario {
+    width: 100%;
+    font-size: 14px;
+}
+
+.tabelaCalendario a {
+    padding-top: 10px;
+    text-decoration: none;
+}
