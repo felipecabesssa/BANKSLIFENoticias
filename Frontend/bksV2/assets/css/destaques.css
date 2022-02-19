@@ -1,0 +1,21 @@
+.destaques h1 {
+    color: var(--fonte-texto);
+    text-align: center;
+    padding: .5rem 0;
+    font-weight: 100;
+}
+
+.listaVideosDestaque li {
+    font-size: 12px;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.listaVideosDestaque li a {
+    text-decoration: none;
+}
+
+
+.listaVideosDestaque {
+    padding-bottom: 1rem;
+}
