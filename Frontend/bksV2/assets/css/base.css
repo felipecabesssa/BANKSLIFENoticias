@@ -34,3 +34,8 @@ p, a, h3, h4, h5 {
 .texto__destaque {
     color: var(--fonte-texto-destaque);
 }
+
+@media (min-width: 600px) {
+    
+
+}

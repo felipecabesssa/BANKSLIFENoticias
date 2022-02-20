@@ -1,5 +1,14 @@
+@media (min-width: 600px) {
+    .destaques {
+        width: 85%;
+        align-items: flex-end;
+        margin-left: auto;
+        padding-right: 10px;
+    }
+}
+
 .destaques h1 {
-    color: var(--fonte-texto);
+    color: var(--fonte-texto-destaque);
     text-align: center;
     padding: .5rem 0;
     font-weight: 100;
@@ -7,8 +16,12 @@
 
 .listaVideosDestaque li {
     font-size: 12px;
+    margin-top: 10px;
     padding: 1em 0;
     text-align: center;
+    border: 1px solid var(--fonte-texto);
+    border-radius: 5px;
+    list-style: none;
 }
 
 .listaVideosDestaque li a {
