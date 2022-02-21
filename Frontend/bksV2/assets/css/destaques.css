@@ -15,6 +15,7 @@
 }
 
 .listaVideosDestaque li {
+    background-color: var(--bg-fundo-destaque);
     font-size: 12px;
     margin-top: 10px;
     padding: 1em 0;
@@ -24,21 +25,16 @@
     list-style: none;
 }
 
-.listaVideosDestaque li a {
+.listaVideosDestaque li:hover {
+    background-color: var(--cinza-escuro);
+}
+
+.listaVideosDestaque a {
     text-decoration: none;
 }
 
 
 .listaVideosDestaque {
-    padding-bottom: 1rem;
-}
-
-.tabelaCalendario {
-    width: 100%;
-    font-size: 14px;
-}
-
-.tabelaCalendario a {
-    padding-top: 10px;
-    text-decoration: none;
+    padding: 5px;
+    margin-bottom: 10px;
 }
