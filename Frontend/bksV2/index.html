@@ -28,10 +28,17 @@
 
     <section class="destaques">
         <h1>Videoooooos</h1>
-        <iframe class="posicaoVideoHome" width="100%" height="200" src="https://www.youtube.com/embed/Neo3E3Ht3pY"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+        <div class="video__container">
+            <div class="embed video1">
+                <iframe src="https://www.youtube.com/embed/Neo3E3Ht3pY"></iframe>
+            </div>
+            <div class="embed video2">
+                <iframe src="https://www.youtube.com/embed/Neo3E3Ht3pY"></iframe>
+            </div>
+            <div class="embed video3">
+                <iframe src="https://www.youtube.com/embed/Neo3E3Ht3pY"></iframe>
+            </div>
+        </div>       
 
         <ul class="listaVideosDestaque">
             <a href="#"><li> Bora Bora - Lançamento chegando, lança a minha BOI</li></a>
@@ -41,32 +48,36 @@
 
         <div class="programacao">
             <h1>Programação - Agenda</h1>
-            <div class="grid__agenda">
-                <div>
-                    <a href="https://bankslife.com.br">
-                        <img src="assets/icons/logoBksSmall.png" alt="">
-                        <p>Lançamento 22/02/22</p>
-                    </a>
+            <div class="grid__agenda__geral">
+                <div class="grid__agenda__iconeEsquerda">
+                    <div>
+                        <a href="https://bankslife.com.br">
+                            <img src="assets/icons/bnkzlifeSmall.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Lançamento site<br> http://bankslife.com.br</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <a href="http://ccsskate.com.br">
-                        <img src="assets/icons/LOGOCCS150.png" alt="">
-                        <p>1ª etapa 19-20/03</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="http://ccsskate.com.br">
-                        <img src="assets/icons/LOGOCCS150.png" alt="">
-                        <p>2ª etapa 09-10/04</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="http://ccsskate.com.br">
-                        <img src="assets/icons/LOGOCCS150.png" alt="">
-                        <p>3ª etapa 23-124/04</p>
-                    </a>
+                <div class="grid__agenda__iconeDireita">
+                    <div>
+                        <ul>
+                            <li>1ª etapa dias 19 e 20 de Março</li>
+                            <li>2ª etapa dias 09 e 10 de Abril</li>
+                            <li>3ª etapa dias 23 e 24 de Abril</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="http://ccsskate.com.br">
+                            <img src="assets/icons/LOGOCCS150.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
+            
+                
         </div>
 
         <!-- <table class="tabelaCalendario">

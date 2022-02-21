@@ -1,9 +1,40 @@
 @media (min-width: 600px) {
     .destaques {
-        width: 85%;
+        width: 90%;
         align-items: flex-end;
         margin-left: auto;
-        padding-right: 10px;
+    }
+
+    .video__container {
+        padding: 0 10px;
+    }
+
+    .listaVideosDestaque {
+        margin-top: -30px;
+    }
+
+    .grid__agenda__geral {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        text-align: center;
+        align-items: center;
+    }
+
+    .grid__agenda__iconeEsquerda {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .grid__agenda__iconeDireita {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+        align-items: center;
+        padding-left: 30px;
     }
 }
 
@@ -37,4 +68,57 @@
 .listaVideosDestaque {
     padding: 5px;
     margin-bottom: 10px;
+}
+
+.embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* essa porcentagem porque o video esta em 16:9
+    regra de 3 - 16x9 = 1920x180
+                 16 = 100% // 9 = ?
+                 9 / 16 = 0,5625 * 100 = 56.25
+    */
+}
+
+.embed iframe {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    border: none;
+}
+
+.video2,
+.video3 {
+    display: none;
+}
+
+/* -------------- Programacao - Agenda --------------- */
+
+.grid__agenda__iconeEsquerda {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    text-align: center;
+    align-items: center;
+}
+
+.grid__agenda__iconeDireita {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    text-align: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.grid__agenda__iconeDireita li {
+    padding-bottom: 10px;
+}
+
+.programacao h1 {
+    margin-bottom: 10px;
+}
+
+.programacao a, li {
+    color: var(--fonte-texto);
+    text-decoration: none;
 }
