@@ -13,6 +13,8 @@ const btnVideoPico2 = document.querySelector('.btnVideoPico2');
 const videoDestaquePico3 = document.querySelector('.videoDestaquePico3');
 const btnVideoPico3 = document.querySelector('.btnVideoPico3');
 
+const  destaque = document.querySelector('.destaque');
+
 
 btnVideoBala.addEventListener('click', function(event) {
     alteraVideoPico0();
@@ -32,6 +34,7 @@ btnVideoPico3.addEventListener('click', function(event) {
 
 function alteraVideoPico0() {
     videoDestaquePico0.classList.remove('videoEscondido');
+    destaque.classList.add('texto__destaque');
     videoDestaquePico1.classList.add('videoEscondido');
     videoDestaquePico2.classList.add('videoEscondido');
     videoDestaquePico3.classList.add('videoEscondido');
@@ -39,6 +42,7 @@ function alteraVideoPico0() {
 
 function alteraVideoPico1() {
     videoDestaquePico1.classList.remove('videoEscondido');
+    destaque.classList.add('texto__destaque');
     videoDestaquePico0.classList.add('videoEscondido');
     videoDestaquePico2.classList.add('videoEscondido');
     videoDestaquePico3.classList.add('videoEscondido');
@@ -46,6 +50,7 @@ function alteraVideoPico1() {
 
 function alteraVideoPico2() {
     videoDestaquePico2.classList.remove('videoEscondido');
+    destaque.classList.add('texto__destaque');
     videoDestaquePico1.classList.add('videoEscondido');
     videoDestaquePico0.classList.add('videoEscondido');
     videoDestaquePico3.classList.add('videoEscondido');
@@ -53,6 +58,7 @@ function alteraVideoPico2() {
 
 function alteraVideoPico3() {
     videoDestaquePico3.classList.remove('videoEscondido');
+    destaque.classList.add('texto__destaque');
     videoDestaquePico1.classList.add('videoEscondido');
     videoDestaquePico2.classList.add('videoEscondido');
     videoDestaquePico0.classList.add('videoEscondido');
