@@ -1,17 +1,46 @@
 // onclick setAtribute(mostraVideo) || setAtribute(escondeVideo) || setAtribute(escondeVideo)
 //                  videoClicado                outro video                  outro video
 
-const videoDestaque = document.querySelector('.videoDestaque1');
-const btnVideo = document.querySelector('btnVideo');
-const videoBala = document.querySelector('videoBala');
-const videoEscondido = document.querySelector('videoEscondido');
+const videoDestaque = document.querySelector('.videoDestaque');
 
-btnVideo.addEventListener('click', function (e) {
-    const el = e.target;
+const videoDestaqueBala = document.querySelector('.videoDestaqueBala');
+const btnVideoBala = document.querySelector('.btnVideoBala');
 
-    if (el.classList.contains('videoBala')) {
-        videoDestaque.removeAttribute('class', 'videoEscondido');
-    }
+const videoDestaquePico = document.querySelector('.videoDestaquePico');
+const btnVideoPico = document.querySelector('.btnVideoPico');
+
+const videoDestaqueBlacYellow = document.querySelector('.videoDestaqueBlacYellow');
+const btnVideoBlackYellow = document.querySelector('.btnVideoBlackYellow');
+
+btnVideoBala.addEventListener('click', function(event) {
+    alteraVideo();
+});
+
+btnVideoPico.addEventListener('click', function(event) {
+    alert('Video Pico selecionado');
+});
+
+btnVideoBlackYellow.addEventListener('click', function(event) {
+    alert('Video Black and yellow - Wiz Kalifa selecionado');
+});
+
+function alteraVideo() {
+    videoDestaqueBala.classList.remove('videoEscondido');
+    videoDestaquePico.classList.add('videoEscondido');
+    videoDestaqueBlacYellow.classList.add('videoEscondido');
+
+}
+
+
+
+
+
+// btnVideo.addEventListener('click', function (e) {
+//     const el = e.target;
+
+//     if (el.classList.contains('videoBala')) {
+//         videoDestaque.removeAttribute('class', 'videoEscondido');
+//     }
 
     // if (el.classList.contains('videoBala')) {
     //     videoDestaque.classList.remove('videoEscondido') 
@@ -23,6 +52,6 @@ btnVideo.addEventListener('click', function (e) {
     //     || videoDestaque.classList.add('mostraVideo');
     // }
 
-});
+// });
 
 

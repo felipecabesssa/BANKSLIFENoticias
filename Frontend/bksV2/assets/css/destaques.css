@@ -99,6 +99,10 @@
     display: none;
 }
 
+.cor__teste {
+    color: red;
+}
+
 /* -------------- Programacao - Agenda --------------- */
 
 .grid__agenda__iconeEsquerda {
